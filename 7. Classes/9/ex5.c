@@ -26,7 +26,8 @@ DATA sum_ar(DATA* ar, size_t size, TYPE_PARAM type)
 int main(void)
 {   
     DATA res_1, res_2;
-    res_1 = sum_ar({DATA{1}, DATA{2}, DATA{3}, DATA{4}, DATA{5}}, 5, 1);
+    res_1 = sum_ar((DATA[]){(DATA){1}, (DATA){2}, (DATA){3}, (DATA){4}, (DATA){5}}, 5, 1);
+    res_2 = sum_ar((DATA[]){(DATA){1.1}, (DATA){2.2}, (DATA){3.3}, (DATA){4.4}, (DATA){5.5}}, 5, 2);
 
     return 0;
 }
